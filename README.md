@@ -1,2 +1,2 @@
-# custom_odoo_buttons
+# Custom Odoo Buttons
 Custom buttons for odoo.

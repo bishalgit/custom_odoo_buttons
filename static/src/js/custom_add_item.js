@@ -6,12 +6,18 @@ odoo.define("custom_odoo_buttons.CustomAddItem", function (require) {
 	var CustomAddItemButton = Widget.extend({
 		start: function (parent, value) {
 			/**
-			 * check if the document is ready and 
+			 * $("").length checks if the element exists
 			 * if the novo_custom_add class exists
 			 */
-            if($(.custom_add_item_button)){
-            	$(".o_field_x2many_list_row_add").find("a").text("Add a " + $(".custom_add_item_button").text());
-            }
+			 /**
+			  * TODO: How to address if there are multiple add an item
+			  * button in a single render of page?
+			  */
+			$(document).ready(function(){
+	            if($(.custom_add_item_button).length){
+	            	$(".o_field_x2many_list_row_add").find("a").text("Add a " + $(".custom_add_item_button").text());
+	            }
+			});
         },
 	});
 
