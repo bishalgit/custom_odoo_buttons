@@ -22,7 +22,8 @@ odoo.define("custom_odoo_buttons.CustomAddItem", function (require) {
 	});
 
 	/**
-	 * To use this widget add custom_add_item_button to the field
+	 * To use this widget add custom_add_item_button class
+	 * to the field
 	 */
 	var customAddItemButton = new CustomAddItemButton();
 	customAddItemButton.appendTo("body");
