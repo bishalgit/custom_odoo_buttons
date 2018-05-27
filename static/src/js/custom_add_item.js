@@ -15,7 +15,6 @@ odoo.define("custom_odoo_buttons.CustomAddItem", function (require) {
 			  */
 			$(document).ready(function(){
 	            if($(".custom_add_item_button").length){
-	            	$(".custom_add_item_button").first().attr("name")
 	            	$(".o_field_x2many_list_row_add").first().find("a").text("Add a " + $(".custom_add_item_button").first().attr("name").split("_")[0]);
 	            }
 			});
