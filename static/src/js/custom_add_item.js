@@ -14,15 +14,16 @@ odoo.define("custom_odoo_buttons.CustomAddItem", function (require) {
 			  * button in a single render of page?
 			  */
 			$(document).ready(function(){
-	            if($(.custom_add_item_button).length){
-	            	$(".o_field_x2many_list_row_add").find("a").text("Add a " + $(".custom_add_item_button").text());
+	            if($(".custom_add_item_button").length){
+	            	$(".custom_add_item_button").first().attr("name")
+	            	$(".o_field_x2many_list_row_add").first().find("a").text("Add a " + $(".custom_add_item_button").first().attr("name").split("_")[0]);
 	            }
 			});
         },
 	});
 
 	/**
-	 * To use this widget add custom_add_item_button to the field
+	 * To use this widget add class="custom_add_item_button" to the field
 	 */
 	var customAddItemButton = new CustomAddItemButton();
 	customAddItemButton.appendTo("body");
